@@ -11,4 +11,6 @@ db.once('open', function() {
     console.log('Connected to Database')
   });
 
+app.use(express.json())
+
 app.listen(3000, () => console.log('server started'));
