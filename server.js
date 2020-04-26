@@ -13,4 +13,11 @@ db.once('open', function() {
 
 app.use(express.json())
 
+
+//create route for subscribers 
+const subscribersRouter = require('./routes/subscribers')
+//using the route 
+app.use('/subscribers', subscribersRouter)
+
+
 app.listen(3000, () => console.log('server started'));
